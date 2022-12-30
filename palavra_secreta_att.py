@@ -21,10 +21,19 @@ usuário.
 """
 import os
 
-palavra_secreta = 'canhoto'.lower()
+from random import choice
+
+p1 = 'Beijo'
+p2 = 'Caju'
+p3 = 'Mel'
+p4 = 'Mario'
+
+
+lista = [p1,p2,p3,p4]
+
+palavra_secreta = choice(lista).capitalize()
 letras_acertadas = ''
 numero_tentativas = 0
-
 
 while True: 
    
