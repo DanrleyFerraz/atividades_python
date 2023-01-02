@@ -23,13 +23,14 @@ import os
 
 from random import choice
 
-p1 = 'Beijo'
-p2 = 'Caju'
-p3 = 'Mel'
-p4 = 'Mario'
+p1 = 'Numero'
+p2 = 'Teclado'
+p3 = 'Trem'
+p4 = 'Pulseira'
+p5 = 'Lembrar'
 
 
-lista = [p1,p2,p3,p4]
+lista = [p1,p2,p3,p4,p5]
 
 palavra_secreta = choice(lista).capitalize()
 letras_acertadas = ''
