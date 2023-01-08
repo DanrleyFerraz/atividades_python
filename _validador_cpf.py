@@ -1,12 +1,25 @@
-############################ VALIDAÇÃO DO PRIMEIRO DIGITO ############################
-
-cpf_enviado_usuario = '74682489070'
+# Validador de CPF
 
 
-nove_digitos = cpf_enviado_usuario[:9]
+import re
+import sys
+
+cpf_enviado_usuario = input('Digite algum CPF para verificar se é válido: ')
+cpf_check = re.sub(
+    r'[^0-9]',
+    '',
+    cpf_enviado_usuario
+)
+
+if cpf_enviado_usuario == cpf_enviado_usuario[0] * len(cpf_enviado_usuario):
+    print('Você enviou dados sequenciais.')
+    sys.exit()
+ 
+nove_digitos = cpf_check[:9]
 contador_regressivo_1 = 10
 
 resultado_digito_1 = 0 
+
 
 
 for numeros in nove_digitos:
@@ -22,13 +35,9 @@ if numeros > 9:
 else:
     digito_1 = numeros
 
-############################ VALIDAÇÃO DO PRIMEIRO DIGITO CONCLUIDA ############################
+######################################################################
 
-################## ABAIXO DISSO JÁ COMEÇA A VALIDAÇÃO DO SEGUNDO DIGITO ##################
-
-############################ VALIDAÇÃO DO SEGUNDO DIGITO ############################
-
-dez_digitos = cpf_enviado_usuario[:10]
+dez_digitos = cpf_check[:10]
 
 contador_regressivo = 11
 
@@ -46,16 +55,10 @@ if resultado_numeros > 9:
 else:
     digito_2 = resultado_numeros
 
-############################ VALIDAÇÃO DO SEGUNDO DIGITO CONCLUIDA ############################
-
-
 cpf_gerado_pelo_calculo = f'{nove_digitos}{digito_1}{digito_2}'
 
-if cpf_gerado_pelo_calculo == cpf_enviado_usuario:
-    print(f'O CPF {cpf_enviado_usuario} É VALIDO!')
+if cpf_gerado_pelo_calculo == cpf_check:
+    print(f'O CPF {cpf_check} É VALIDO!')
 
 else:
     print('CPF INVALIDO!')
-
-
-
