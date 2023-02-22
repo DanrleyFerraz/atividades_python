@@ -60,5 +60,8 @@ cpf_gerado_pelo_calculo = f'{nove_digitos}{digito_1}{digito_2}'
 if cpf_gerado_pelo_calculo == cpf_check:
     print(f'O CPF {cpf_check} É VALIDO!')
 
+for i in range(20):
+    print('\t')
+
 else:
     print('CPF INVALIDO!')

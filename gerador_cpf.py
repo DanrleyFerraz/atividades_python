@@ -1,6 +1,5 @@
 import random
 
-
 nove_digitos = ''
 
 for i in range(9):
