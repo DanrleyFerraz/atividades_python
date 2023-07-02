@@ -23,22 +23,22 @@ import os
 
 print("Quanto é 2+2 ?")
 print(
-    "A)1" 
-    "   B)3"
-    "   C)4"
-    "   D)5" 
+    "\nA)1" 
+    "\nB)3"
+    "\nC)4"
+    "\nD)5" 
 )
 resposta_1 = input("\nDigite sua resposta: ")
 
 if resposta_1 == "4":
-    print("\nParabéns paizão. Você acertou memo 👍👍")
+    print("\nParabéns acertou memo 👍👍")
     input("Aperte enter para continuar...")
     os.system("cls")
 
 
 
 else:
-    print("\nErrado amigo. Errado. 👎👎👎")
+    print("\nErrado 👎👎👎")
     input("Aperte enter para continuar...")
     os.system("cls")
 
